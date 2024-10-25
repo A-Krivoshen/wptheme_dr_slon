@@ -1,0 +1,136 @@
+/*
+ * Theme Name: dr_slon
+ * Description: Ультра-минималистичная стартовая тема WordPress с дополнительными функциями.
+ * Version: 1.0
+ * Author: Ваше Имя
+ * Author URI: https://ваш-сайт.ru
+ * Text Domain: dr_slon
+ * License: GNU General Public License v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для кнопки "Наверх" */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 1000;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #333;
+}
+
+footer .social-media a:hover {
+    color: #007bff;
+}
+
+/* Определение CSS-переменных для светлой темы */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #007bff;
+    --navbar-bg: #f8f9fa;
+    --footer-bg: #f8f9fa;
+}
+
+/* Стили, использующие CSS-переменные */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Обновление стилей для навбара и футера */
+.navbar {
+    background-color: var(--navbar-bg);
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: var(--text-color);
+}
+
+.navbar .nav-link:hover {
+    color: var(--link-color);
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+}
+
+footer a {
+    color: var(--link-color);
+}
+
+footer a:hover {
+    color: #0056b3;
+}
+
+/* Стили для переключателя темы */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#theme-switch {
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+#theme-switch .fas {
+    transition: color 0.3s;
+}
+
+body.dark-mode #theme-switch .fas {
+    color: #f1c40f;
+}
+
+/* Стили для тёмной темы */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --link-color: #bb86fc;
+    --navbar-bg: #1f1f1f;
+    --footer-bg: #1f1f1f;
+}
+
+/* Отступы между пунктами меню */
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+
+/* Добавление gap между карточками постов */
+.posts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.posts-grid .col-md-4 {
+    padding: 15px;
+}
+
+/* Отступы между виджетами */
+.widget {
+    margin-bottom: 30px;
+}
